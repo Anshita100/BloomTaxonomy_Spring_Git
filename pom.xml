@@ -30,11 +30,54 @@
 		<java.version>17</java.version>
 	</properties>
 	<dependencies>
+	<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-thymeleaf</artifactId>
+		</dependency>
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter</artifactId>
+			<artifactId>spring-boot-starter-web</artifactId>
 		</dependency>
+		
+<!-- for file handling -->
+      <dependency>
+    <groupId>org.apache.poi</groupId>
+    <artifactId>poi-ooxml</artifactId>
+    <version>5.2.3</version> 
+</dependency>
+<!--Add the dependencies for making HTTP requests to the API. You can use RestTemplate 
+or a library like OkHttp or Apache HttpClient.
 
+If you're using Maven, include the dependency for spring-boot-starter-web (which includes RestTemplate):
+-->		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-devtools</artifactId>
+			<scope>runtime</scope>
+			<optional>true</optional>
+		</dependency>
+		 <!-- For JSON parsing -->
+        <dependency>
+            <groupId>com.fasterxml.jackson.core</groupId>
+            <artifactId>jackson-databind</artifactId>
+        </dependency>
+        
+        <!-- Instead of RestTemplate we are using webClient because RestTemplate is outdated after Spring 5 -->
+        <dependency>
+    <groupId>org.springframework.boot</groupId>
+    <artifactId>spring-boot-starter-webflux</artifactId>
+    </dependency> 
+    
+     <!-- <dependency>
+    <groupId>com.openai</groupId>
+    <artifactId>openai-java-client</artifactId>
+    <version>latest_version</version>
+</dependency>-->
+
+		<dependency>
+			<groupId>org.projectlombok</groupId>
+			<artifactId>lombok</artifactId>
+			<optional>true</optional>
+		</dependency>
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-test</artifactId>
