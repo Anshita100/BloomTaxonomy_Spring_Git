@@ -1,21 +1,43 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
+    <title>Extracted Questions</title>
+</head>
+<body>
+    <h1>List of Questions</h1>
+    <ul>
+        <li th:each="question : ${questions}" th:text="${question} + ' Hello'"></li>
+         <p th:if="${error}" th:text="${error}"></p>
+    </ul>
+</body>
+</html>
+
+
+
+
+
+
+
+
+<!-- <!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
     <title>Question Paper Analysis Result</title>
 </head>
 <body>
     <h2>Analysis Results</h2>
-   <!--   <ul>
+     <ul>
         <li th:each="entry : ${analysis}">
             <span th:text="${entry.key}"></span> - 
             <span th:text="${entry.value.level}"></span> 
             (Percentage: <span th:text="${entry.value.percentage}"></span>%)
         </li>
     </ul>
-    -->
-    <!-- Add a download button to download the result as a file -->
+   
+    Add a download button to download the result as a file
     <a href="/download">
         <button type="button">Download Result</button>
     </a>
 </body>
 </html>
+ -->
