@@ -39,7 +39,8 @@
 			<artifactId>spring-boot-starter-web</artifactId>
 		</dependency>
 		
-<!-- for file handling -->
+<!-- for file handling  Apache POI: A popular library for 
+working with Microsoft Office files (including DOCX). -->
       <dependency>
     <groupId>org.apache.poi</groupId>
     <artifactId>poi-ooxml</artifactId>

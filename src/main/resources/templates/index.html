@@ -4,6 +4,7 @@
     <title>Upload Question Paper</title>
 </head>
 <body>
+  <!-- user has uploaded docx file now it will go to the fileupload controller  /upload url -->
     <h1>Upload Question Paper</h1>
     <form th:action="@{/upload}" method="post" enctype="multipart/form-data">
         <input type="file" name="file" accept=".docx" />
